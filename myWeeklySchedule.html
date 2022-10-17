@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Weekly Schedule</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1>My Weekly Schedule</h1>
+	</header>
+	<section>
+		<nav>
+			<!--activities definition-->
+			<h1>Activities Definition</h1>
+			<p>Su: 7 sleep, 2 eat, 6 homework, 3 social, 2 in-transit, 2 chore, 2 gym</p>
+			<p>M: 6 sleep, 2 eat, 5 class, <span class="increase">4 homework</span>, 3 study, 3 social, 1 chore</p>
+			<p>Tu: 7 sleep, 2 eat, 3 class, 3 homework, 3 study, <span class="decrease">3 social</span>, 3 sports</p>
+			<p>W: 6 sleep, 2 eat, 4 class, <span class="increase">5 homework</span>, 3 study, 2 sports, <span class="decrease">2 tv</span></p>
+			<p>Th: 7 sleep, 2 eat, 3 class, <span class="increase">5 homework</span>, <span class="decrease">3 social</span>, 2 chore, <span class="increase">2 gym</span></p>
+			<p>F: 6 sleep, 2 eat, 2 class, <span class="decrease">4 homework</span>, 5 social, 2 gym, 3 tv</p>
+			<p>Sa: 7 sleep, 2 eat, 6 social, 2 in-transit, 3 sports, 4 tv</p>
+			<p>Increase: <span class="increase">Green</span></p>
+			<p>Decrease: <span class="decrease">Red</span></p>
+		</nav>
+
+		<article>
+			<div class="center">
+				<!--Sunday-->
+				<div class="container">
+					<div class="day"><span>Su:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="140" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="140" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="120" x="180" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="60" x="300" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="40" x="360" style="fill:rgb(0,100,0);"></rect>
+						<rect height="25" width="40" x="400" style="fill:rgb(0,0,100);"></rect>
+						<rect height="25" width="40" x="440" style="fill:rgb(0,100,100);"></rect>
+					</svg>
+				</div>
+				
+				<!--Monday-->
+				<div class="container">
+					<div class="day"><span>M:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="120" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="120" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="100" x="160" style="fill:rgb(0,0,255);"></rect>
+						<rect height="25" width="80" x="260" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="60" x="340" style="fill:rgb(0,255,255);"></rect>
+						<rect height="25" width="60" x="400" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="20" x="460" style="fill:rgb(0,0,100);"></rect>
+					</svg>
+				</div>
+				<!--Tuesday-->
+				<div class="container">
+					<div class="day"><span>Tu:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="140" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="140" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="60" x="180" style="fill:rgb(0,0,255);"></rect>
+						<rect height="25" width="60" x="240" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="60" x="300" style="fill:rgb(0,255,255);"></rect>
+						<rect height="25" width="60" x="360" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="60" x="420" style="fill:rgb(100,0,0);"></rect>
+					</svg>
+				</div>
+				<!--Wednesday-->
+				<div class="container">
+					<div class="day"><span>W:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="140" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="140" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="60" x="180" style="fill:rgb(0,0,255);"></rect>
+						<rect height="25" width="100" x="240" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="60" x="340" style="fill:rgb(0,255,255);"></rect>
+						<rect height="25" width="40" x="400" style="fill:rgb(100,0,0);"></rect>
+						<rect height="25" width="40" x="440" style="fill:rgb(100,100,0);"></rect>
+					</svg>
+				</div>
+				<!--Thursday-->
+				<div class="container">
+					<div class="day"><span>Th:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="120" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="120" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="100" x="160" style="fill:rgb(0,0,255);"></rect>
+						<rect height="25" width="100" x="260" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="60" x="340" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="40" x="400" style="fill:rgb(0,0,100);"></rect>
+						<rect height="25" width="40" x="440" style="fill:rgb(0,100,100);"></rect>
+					</svg>
+				</div>
+				<!--Friday-->
+				<div class="container">
+					<div class="day"><span>F:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="120" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="120" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="40" x="160" style="fill:rgb(0,0,255);"></rect>
+						<rect height="25" width="80" x="200" style="fill:rgb(255,255,0);"></rect>
+						<rect height="25" width="100" x="280" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="40" x="380" style="fill:rgb(0,100,100);"></rect>
+						<rect height="25" width="60" x="420" style="fill:rgb(100,100,0);"></rect>
+					</svg>
+				</div>
+				<!--Saturday-->
+				<div class="container">
+					<div class="day"><span>Sa:</span></div>
+					<svg height="25" width="480" style="float:left;">
+						<rect height="25" width="140" style="fill:rgb(255,0,0);"></rect>
+						<rect height="25" width="40" x="140" style="fill:rgb(0,255,0);"></rect>
+						<rect height="25" width="120" x="180" style="fill:rgb(0,0,0);"></rect>
+						<rect height="25" width="40" x="300" style="fill:rgb(0,100,0);"></rect>
+						<rect height="25" width="60" x="340" style="fill:rgb(100,0,0);"></rect>
+						<rect height="25" width="80" x="400" style="fill:rgb(100,100,0);"></rect>
+					</svg>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<footer>
+		<span>Sleep = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(255,0,0);"></rect></svg></span>
+		<span>Eat = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,255,0);"></rect></svg></span>
+		<span>Class = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,0,255);"></rect></svg></span>
+		<span>Homework = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(255,255,0);"></rect></svg></span>
+		<span>Study = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,255,255);"></rect></svg></span>
+		<span>Social = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,0,0);"></rect></svg></span>
+		<span>Sports = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(100,0,0);"></rect></svg></span>
+		<span>In-Transit = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,100,0);"></rect></svg></span>
+		<span>Chore = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,0,100);"></rect></svg></span>
+		<span>TV = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(100,100,0);"></rect></svg></span>
+		<span>Gym = <svg height="20" width="20"><rect height="20" width="20" style="fill:rgb(0,100,100);"></rect></svg></span>
+		<h1 style="padding-top: 20px;">Justin Fan</h1>
+	</footer>
+
+	<script>
+		d3.select('h1').style('color', 'white');
+		d3.select('h1').style('font-size', '42px');
+	</script>
+</body>
+</html>
